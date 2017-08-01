@@ -17,7 +17,8 @@
         The # character indicates a block 
         Here we are using a block with the #each helper
 
-        In the last loop we can use this.name or simply name
+        In the last loop (looping objects) we can use this.name or simply name
+        Also note that we get to a property outside of the looping context by using @root
     -->
 
 
@@ -30,7 +31,7 @@
         </ul>
         <ul>
             {{#each foos}}
-            <li>{{name}}</li>
+            <li>{{name}} is a {{@root.type}}</li>
             {{/each}}
         </ul>
         
