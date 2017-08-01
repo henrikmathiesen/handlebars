@@ -12,13 +12,9 @@
 <body>
     <h1>Hello Handlebars</h1>
     <div id="app"></div>
+    <div id="app-too"></div>
 
-    <script>
-        // Handlebars.compile returns a function that can be executed with data
-        var template = Handlebars.compile('<div>Hello {{name}}</div>');
-        var $app = document.getElementById('app');
-        $app.innerHTML = template({ name: 'Foo' });
-    </script>
+    <script src="hello-handlebars.js"></script>
 </body>
 
 </html>
