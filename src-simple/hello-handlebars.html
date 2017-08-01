@@ -1,13 +1,24 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Hello Handlebars">
     <title>Hello Handlebars</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <h1>Hello Handlebars</h1>
-  </body>
+    <div id="app"></div>
+
+    <script>
+        // Handlebars.compile returns a function that can be executed with data
+        var template = Handlebars.compile('<div>Hello {{name}}</div>');
+        var $app = document.getElementById('app');
+        $app.innerHTML = template({ name: 'Foo' });
+    </script>
+</body>
+
 </html>
