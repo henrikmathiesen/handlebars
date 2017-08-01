@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Handlebars - Partials">
     <title>Handlebars - Partials</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
 </head>
 
 <body>
@@ -20,6 +19,8 @@
 
         - Partials recieve same context as the template they are used in
         - Can also send variables to partials (use spaces between them)
+
+        - Also note that it is fine to include script before /body instead of in head
     -->
 
     <script id="app-template" type="text/x-handlebars-template">
@@ -33,6 +34,9 @@
         <div>
             {{> partialToo}}
         </div>
+         <div>
+            {{> externalPartial}}
+        </div> 
     </script>
     <script id="app-partial" type="text/x-handlebars-template">
         <h2>Iam a partial</h2>
@@ -43,6 +47,8 @@
             {{someVar}}
         </div>
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
     <script src="partials.js"></script>
 </body>
 
