@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Handlebars - Template in Script Tag">
+    <title>Handlebars - Template in Script Tag</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+</head>
+
+<body>
+    <h1>Handlebars - Template in Script Tag</h1>
+    <div id="app"></div>
+
+    <script id="app-template" type="text/x-handlebars-template">
+        <h2>{{name}}</h2>
+        <h3>City: {{address.city}}</h3>
+        <h3>Street: {{address.street}}</h3>
+    </script>
+    <script src="template-in-script-tag.js"></script>
+</body>
+
+</html>
