@@ -1,5 +1,5 @@
 // Handlebars.compile takes a template string and options (optional)
-// Handlebars.compile returns a function that can be executed with data (context), it can be run multiple times
+// Handlebars.compile returns a function that can be executed with data (context), its a cached version that can be run multiple times
 
 var template = Handlebars.compile('<div>Hello {{name}}</div>');
 
@@ -14,3 +14,18 @@ $appToo.innerHTML = template({ name: 'Bar' });
 var templateSpicy = Handlebars.compile('<div>{{itsAlive}}</div>', { noEscape: true });
 var $appSpicy = document.getElementById('app-spicy');
 $appSpicy.innerHTML = templateSpicy({ itsAlive: '<i>Hi there</i>' });
+
+//
+// "The handlebars dance"
+// - For clarity
+// * Get the template
+// * Compile template
+// * Render with data
+// * Insert into DOM
+
+var templateFoo = 'My name is {{name}}';
+var compiledFoo = Handlebars.compile(templateFoo);
+var dataFoo = { name: 'Foo' };
+var renderedFoo = compiledFoo(dataFoo);
+var $appDance = document.getElementById('app-dance');
+$appDance.innerHTML = renderedFoo;
