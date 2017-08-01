@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Handlebars - Iterating Arrays">
+    <title>Handlebars - Iterating Arrays</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+</head>
+
+<body>
+    <h1>Handlebars - Iterating Arrays</h1>
+    <div id="app"></div>
+
+    <!-- 
+        The # character indicates a block 
+        Here we are using a block with the #each helper
+
+        In the last loop we can use this.name or simply name
+    -->
+
+
+    <script id="app-template" type="text/x-handlebars-template">
+        <h2>{{type}}</h2>
+        <ul>
+            {{#each names }}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+        <ul>
+            {{#each foos}}
+            <li>{{name}}</li>
+            {{/each}}
+        </ul>
+        
+    </script>
+    <script src="iterating-arrays.js"></script>
+</body>
+
+</html>
