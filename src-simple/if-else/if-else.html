@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Handlebars - If Else">
+    <title>Handlebars - If Else</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+</head>
+
+<body>
+    <h1>Handlebars - If Else</h1>
+    <div id="app"></div>
+
+    <!--
+        Logic in handlebars if else is purposly made simple
+        - Can only check one property
+        - No comparison
+        - No operations
+
+        Can use else together with each
+    -->
+
+
+    <script id="app-template" type="text/x-handlebars-template">
+        <div>
+            {{#if isTruthy}} Soo true {{/if}}
+        </div>
+        <div>
+            {{#if canDance}} Do the dance ... {{else}} Keep calm {{/if}}
+        </div>
+        <div>
+            {{#each dogs}} {{name}} {{else}} dogs is falsy {{/each}}
+        </div>
+    </script>
+    <script src="if-else.js"></script>
+</body>
+
+</html>
