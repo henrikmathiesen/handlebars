@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Handlebars - Partials">
+    <title>Handlebars - Partials</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+</head>
+
+<body>
+    <h1>Handlebars - Partials</h1>
+    <div id="app"></div>
+
+    <!-- 
+        - A partial is a mini template
+        - Anything that is possible in a template is possible in a partial, including rendering other partials
+        - A partial is used for modularize and reuse template code
+
+        - Partials recieve same context as the template they are used in
+        - Can also send variables to partials (use spaces between them)
+    -->
+
+    <script id="app-template" type="text/x-handlebars-template">
+        <h2>Iam a template</h2>
+        <div>
+            {{name}}
+        </div>
+        <div>
+            {{> partial someVar='hi'}}
+        </div>
+    </script>
+    <script id="app-partial" type="text/x-handlebars-template">
+        <h2>Iam a partial</h2>
+        <div>
+            {{name}}
+        </div>
+        <div>
+            {{someVar}}
+        </div>
+    </script>
+    <script src="partials.js"></script>
+</body>
+
+</html>
