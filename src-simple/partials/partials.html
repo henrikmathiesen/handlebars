@@ -14,7 +14,7 @@
     <div id="app"></div>
 
     <!-- 
-        - A partial is a mini template
+        - A partial is a mini template, and are compiled along with the template
         - Anything that is possible in a template is possible in a partial, including rendering other partials
         - A partial is used for modularize and reuse template code
 
@@ -29,6 +29,9 @@
         </div>
         <div>
             {{> partial someVar='hi'}}
+        </div>
+        <div>
+            {{> partialToo}}
         </div>
     </script>
     <script id="app-partial" type="text/x-handlebars-template">
