@@ -11,7 +11,8 @@ https://www.youtube.com/watch?v=4HuAnM6b2d8
 
 http://handlebarsjs.com/precompilation.html  
 https://stackoverflow.com/questions/19147161/what-is-the-difference-between-handlebar-js-and-handlebar-runtime-js  
-https://www.youtube.com/watch?v=wSNa5b1mS5Y , webpack at the end
+https://www.youtube.com/watch?v=wSNa5b1mS5Y , webpack at the end  
+http://www.adamwadeharris.com/how-to-precompile-handlebars-templates/
 
 ## Partials Advanced
 

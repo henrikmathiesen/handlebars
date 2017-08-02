@@ -14,6 +14,10 @@
     <!--
         - When doing precompilation, we only need handlebars.runtime.min.js and not the full handlebars.min.js
         - We are going to start of with a NPM script, following the official documentation
+
+        NPM Script
+        handlebars <input> -f <output> -k each -k if -k unless --knownOnly
+        -k means precompile these helpers (more efficient), --knownOnly means that only those helpers are allowed in code
     -->
 
     <h1>Handlebars - precompilation</h1>
