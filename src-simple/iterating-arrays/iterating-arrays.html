@@ -17,8 +17,11 @@
         The # character indicates a block 
         Here we are using a block with the #each helper
 
-        In the last loop (looping objects) we can use this.name or simply name
+        In the middle loop (looping objects) we can use this.name or simply name
         Also note that we get to a property outside of the looping context by using @root
+
+        In the last loop we insert a comma if not the last item
+        We can also print the index by using {{@key}}
     -->
 
 
@@ -34,6 +37,11 @@
             <li>{{name}} is a {{@root.type}}</li>
             {{/each}}
         </ul>
+        <div>
+            {{#each names}}
+            {{this}}{{^@last}},{{/@last}}
+            {{/each}}
+        </div>
         
     </script>
     <script src="iterating-arrays.js"></script>
