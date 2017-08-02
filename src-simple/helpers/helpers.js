@@ -28,15 +28,23 @@ var helpers = {
         // can render non escaped html with this constructor
         return new Handlebars.SafeString('<i>foo</i>');
     },
-    escapeHelper: function () { 
+    escapeHelper: function () {
         // this will escape the html code so browsers dont render it
         return Handlebars.escapeExpression('<i>foo</i>');
+    },
+    formatMoneyHelper: function (sum) {
+        return Math.ceil(sum) + ' kr';
+    },
+    applyTaxHelper: function (sum) { 
+        return sum * 0.7;
     }
 };
 
 Handlebars.registerHelper('exampleHelper', helpers.exampleHelper);
 Handlebars.registerHelper('safeHelper', helpers.safeHelper);
 Handlebars.registerHelper('escapeHelper', helpers.escapeHelper);
+Handlebars.registerHelper('formatMoneyHelper', helpers.formatMoneyHelper);
+Handlebars.registerHelper('applyTaxHelper', helpers.applyTaxHelper);
 
 var template02 = '{{exampleHelper "foo"}}'; // can use space seperate multiple arguments
 var compiled02 = Handlebars.compile(template02);
@@ -53,3 +61,10 @@ document.getElementById('app-03').innerHTML = compiled03();
 var template04 = '{{{escapeHelper}}}';
 var compiled04 = Handlebars.compile(template04);
 document.getElementById('app-04').innerHTML = compiled04();
+
+//
+// We can use helpers inside helpers
+
+var template05 = '{{ formatMoneyHelper (applyTaxHelper 100) }}';
+var compiled05 = Handlebars.compile(template05);
+document.getElementById('app-05').innerHTML = compiled05();
