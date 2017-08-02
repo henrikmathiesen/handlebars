@@ -1,5 +1,5 @@
 {
-  "name": "handlebars",
+  "name": "handlebars-repo",
   "version": "1.0.0",
   "license": "ISC",
   "repository": {
@@ -7,9 +7,10 @@
     "url": "git+https://github.com/henrikmathiesen/handlebars.git"
   },
   "scripts": {
-    "start":"http-server ./src-simple -p 1337"
+    "start": "http-server ./src-simple -p 1337"
   },
   "devDependencies": {
+    "handlebars": "4.0.10",
     "http-server": "0.10.0"
   }
 }
