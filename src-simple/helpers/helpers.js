@@ -20,14 +20,17 @@ document.getElementById('app-01').innerHTML = compiled01(data01);
 // - It can be a good practice to include Helpers in a seperate file
 
 var helpers = {
-    example: function (x) { 
+    exampleHelper: function (x) { 
         // this keyword refers to the context where helper was called
         return x;
     }
 };
 
-Handlebars.registerHelper('exampleHelper', helpers.example);
+Handlebars.registerHelper('exampleHelper', helpers.exampleHelper);
 
 var template02 = '{{exampleHelper "foo"}}'; // can use space seperate multiple arguments
 var compiled02 = Handlebars.compile(template02);
 document.getElementById('app-02').innerHTML = compiled02();
+
+// Can use helpers from js code also
+console.log(Handlebars.helpers.exampleHelper('bar'));
