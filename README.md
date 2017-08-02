@@ -7,10 +7,18 @@ https://app.pluralsight.com/library/courses/handlebars-javascript-templating
 https://www.youtube.com/playlist?list=PLtV5RF44Yj8S4RcpQehL-2XMuVsJXwNvK  
 https://www.youtube.com/watch?v=4HuAnM6b2d8
 
+## Precompile
+
 http://handlebarsjs.com/precompilation.html  
 https://stackoverflow.com/questions/19147161/what-is-the-difference-between-handlebar-js-and-handlebar-runtime-js
 
+## Partials Advanced
+
 https://cloudfour.com/thinks/the-hidden-power-of-handlebars-partials/
+
+## Fabricator
+
+https://www.youtube.com/watch?v=fLWhd7OedY0 , Fabricator
 
 ## handlebars vs mustache file size
 
