@@ -1,3 +1,5 @@
+Handlebars.partials = Handlebars.templates;
+
 var data = {
     name: 'Foo'
 };

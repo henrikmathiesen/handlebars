@@ -18,6 +18,14 @@
         NPM Script
         handlebars <input> -f <output> -k each -k if -k unless --knownOnly
         -k means precompile these helpers (more efficient), --knownOnly means that only those helpers are allowed in code
+
+        Note: 
+            - templates file extension must be .handlebars (and not .hbs)
+            - globs seams to not be supported, not so easy then to seperate partial builds (even though the compiler supports it with -p)
+            - if partials were in seperate folders, we could have used this: https://www.raymondcamden.com/2015/03/14/quick-handlebars-tip-concerning-precompilation/
+            - this is a solution that works: https://stackoverflow.com/questions/12014547/how-do-i-precompile-partials-for-handlebars-js
+                - See top of precompilation.js
+                - Might not be optimal, I think we need Gulp or Webpack
     -->
 
     <h1>Handlebars - precompilation</h1>
