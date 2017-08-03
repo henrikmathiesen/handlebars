@@ -8,10 +8,13 @@
   },
   "scripts": {
     "start": "http-server ./src-simple -p 1337",
-    "handle":"handlebars ./src-simple/precompilation/templates/ -f ./src-simple/precompilation/build/templates.js -k each -k if -k unless --knownOnly"
+    "handle": "handlebars ./src-simple/precompilation/templates/ -f ./src-simple/precompilation/build/templates.js -k each -k if -k unless --knownOnly",
+    "webpack": "webpack --config webpack/webpack.config.js"
   },
   "devDependencies": {
     "handlebars": "4.0.10",
-    "http-server": "0.10.0"
+    "handlebars-loader": "1.5.0",
+    "http-server": "0.10.0",
+    "webpack": "3.4.1"
   }
 }
