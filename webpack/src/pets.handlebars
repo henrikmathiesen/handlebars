@@ -1,9 +1,5 @@
 {{#each pets}}
 <div class="pet">
-    <div class="photo-column">
-        <img src="{{photo}}">
-    </div>
-
     <div class="info-column">
         <h2>{{name}} <span class="species">({{species}})</span></h2>
 
@@ -21,3 +17,6 @@
     </div>
 </div>
 {{/each}}
+<div>
+    {{> _partial}}
+</div>

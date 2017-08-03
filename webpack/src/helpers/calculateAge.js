@@ -1,4 +1,4 @@
-module.exports = function (birthYear) {
+export default function (birthYear) {
     var age = new Date().getFullYear() - birthYear;
 
     if (age > 0) {
