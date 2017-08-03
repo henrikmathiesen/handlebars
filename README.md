@@ -17,7 +17,8 @@ https://www.raymondcamden.com/2015/03/14/quick-handlebars-tip-concerning-precomp
 
 ## Partials Advanced
 
-https://cloudfour.com/thinks/the-hidden-power-of-handlebars-partials/
+https://cloudfour.com/thinks/the-hidden-power-of-handlebars-partials/  
+https://www.jonathan-petitcolas.com/2016/01/23/webpack-html-plugin-in-a-nutshell.html , Generating Static Websites with Webpack
 
 ## Fabricator
 
