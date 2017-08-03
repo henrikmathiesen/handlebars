@@ -1,20 +1,17 @@
 {{#each pets}}
-<div class="pet">
-    <div class="info-column">
-        <h2>{{name}} <span class="species">({{species}})</span></h2>
+<div>
+    <h2>{{name}} ({{species}})</h2>
 
-        <p>Age: {{calculateAge birthYear}}</p>
+    <p>Age: {{calculateAge birthYear}}</p>
 
-        {{#if favFoods}}
-        <h4 class="headline-bar">Favorite Foods</h4>
-        <ul class="favorite-foods">
-            {{#each favFoods}}
-            <li>{{{this}}}</li>
-            {{/each}}
-        </ul>
-        {{/if}}
-
-    </div>
+    {{#if favFoods}}
+    <h4>Favorite Foods</h4>
+    <ul>
+        {{#each favFoods}}
+        <li>{{{this}}}</li>
+        {{/each}}
+    </ul>
+    {{/if}}
 </div>
 {{/each}}
 <div>
