@@ -9,12 +9,15 @@
   "scripts": {
     "start": "http-server ./src-simple -p 1337",
     "handle": "handlebars ./src-simple/precompilation/templates/ -f ./src-simple/precompilation/build/templates.js -k each -k if -k unless --knownOnly",
-    "webpack": "webpack --config webpack/webpack.config.js"
+    "webpack": "webpack --config webpack/webpack.config.js",
+    "webpack:watch": "webpack-dev-server --config webpack/webpack.config.js --open"
   },
   "devDependencies": {
     "handlebars": "4.0.10",
     "handlebars-loader": "1.5.0",
+    "html-webpack-plugin": "2.30.1",
     "http-server": "0.10.0",
-    "webpack": "3.4.1"
+    "webpack": "3.4.1",
+    "webpack-dev-server": "2.6.1"
   }
 }

@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, 'src/index.js'),
@@ -12,9 +13,19 @@ module.exports = {
                 test: /\.handlebars$/,
                 exclude: /node_modules/,
                 use: [
-                    'handlebars-loader'
+                    {
+                        loader: 'handlebars-loader',
+                        options: { 
+                            helperDirs: path.resolve(__dirname, 'src/helpers') 
+                        }
+                    }
                 ]
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src/index.html')
+        })
+    ]
 };
