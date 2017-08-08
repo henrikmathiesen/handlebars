@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{#if title}} {{title}} {{else}} Base Page Title {{/if}} - My Site">
+    <title>
+        {{#if title}} {{title}} {{else}} Base Page Title {{/if}}
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"> {{> styles-block}}
+</head>
+
+<body>
+    <h1>{{#if title}} {{title}} {{else}} Base Page Title {{/if}}</h1>
+    {{> hero-block}}
+
+    <footer>
+        {{!-- The 'includes/footer' partial is the default content, but can be overridden. --}}
+        {{#> footer-block}} {{> includes/footer }} {{/footer-block}}
+    </footer>
+
+    {{> scripts-block}}
+</body>
+
+</html>
