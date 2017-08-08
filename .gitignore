@@ -1,5 +1,6 @@
 .vscode
 node_modules
 src-simple/precompilation/build
+handlebars-layout/build
 webpack/dist
 *.log
