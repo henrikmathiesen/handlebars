@@ -1,0 +1,11 @@
+{{!-- layouts/base is "injected" into this file, in other words: this file extends the layout --}}
+
+{{#> layouts/base title="Page One" }}
+
+  {{#*inline "hero-block"}}
+    {{> includes/hero
+      hero-title="Hero 1 alt title"
+    }}
+  {{/inline}}
+
+{{/layouts/base}}

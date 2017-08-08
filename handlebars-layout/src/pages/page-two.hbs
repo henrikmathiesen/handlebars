@@ -1,0 +1,17 @@
+{{#> layouts/base }}
+
+    {{#*inline "styles-block"}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"> 
+    {{/inline}}
+
+    {{#*inline "hero-block"}}
+    {{> includes/hero
+        hero-title="Hero 2 alt title"
+    }}
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+    <p>Custom footer</p>
+    {{/inline}}
+
+{{/layouts/base}}
