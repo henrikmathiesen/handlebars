@@ -18,6 +18,7 @@ gulp.task('default', function () {
         // In the first argument (currently an empty object), we can send in template data
         .pipe(handlebars({}, {
             // ignores included partials that are not in batch path(?)
+            // - lets test creating a _partial-not-in-path.hbs and see if it renders,  gulp compiler throws an error
             ignorePartials: true,
             batch: [config.path.src + '/partials']
         }))
