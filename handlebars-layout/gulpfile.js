@@ -20,7 +20,12 @@ gulp.task('default', function () {
             // ignores included partials that are not in batch path(?)
             // - lets test creating a _partial-not-in-path.hbs and see if it renders,  gulp compiler throws an error
             ignorePartials: true,
-            batch: [config.path.src + '/partials']
+            batch: [config.path.src + '/partials'],
+            helpers: {
+                capitals: function (str) {
+                    return str.toUpperCase();
+                }
+            }
         }))
         .pipe(rename({
             extname: '.html'
