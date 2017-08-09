@@ -7,8 +7,8 @@
     "url": "git+https://github.com/henrikmathiesen/handlebars.git"
   },
   "scripts": {
-    "start": "http-server ./src-simple -p 1337",
-    "handle": "handlebars ./src-simple/precompilation/templates/ -f ./src-simple/precompilation/build/templates.js -k each -k if -k unless --knownOnly",
+    "handle": "handlebars ./src-simple/precompilation/templates/ -f ./src-simple/precompilation/build/templates.js -k each -k if -k unless -k unknownHelper --knownOnly",
+    "serve:simple": "http-server ./src-simple -p 1337",
     "webpack": "webpack --config webpack/webpack.config.js",
     "webpack:watch": "webpack-dev-server --config webpack/webpack.config.js --open",
     "layout": "gulp --gulpfile ./handlebars-layout/gulpfile.js",

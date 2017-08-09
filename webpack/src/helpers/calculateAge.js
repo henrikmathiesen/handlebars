@@ -3,7 +3,8 @@ export default function (birthYear) {
 
     if (age > 0) {
         return age + " years old";
-    } else {
+    }
+    else {
         return "Less than a year old";
     }
 };

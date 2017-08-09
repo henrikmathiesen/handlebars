@@ -4,6 +4,14 @@ var data = {
     name: 'Foo'
 };
 
+// In package.json where we run the handlebars cli compiler we specify known helpers only, lets test adding an "unknown helper"
+// - The compiler throws an error, lets test adding it to the list in package.json
+// - It works, lets see if we need to register it bellow, we do need to register the helper
+var unknownHelper = function (x) { 
+    return x;
+};
+Handlebars.registerHelper('unknownHelper', unknownHelper);
+
 // We use our compiled template like this, can also send in options as second argument
 document.getElementById('app-01').innerHTML = Handlebars.templates.template(data);
 
